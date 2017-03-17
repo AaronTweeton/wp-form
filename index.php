@@ -16,6 +16,7 @@
 		<![endif]-->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/angular.min.js"></script>
   </head>
   <body>
 	<div class="container">
