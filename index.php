@@ -14,33 +14,32 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/angular.min.js"></script>
   </head>
   <body>
 	<div class="container">
 		<h1>PHP Form</h1>
-		<form id="estimateForm" name="estimateForm" method="POST" enctype="multipart/form-data" action="#">
+		<form id="estimateForm" name="estimateForm" method="POST" enctype="multipart/form-data" action="process.php">
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name." required maxlength="50">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name." maxlength="50">
 					</div>
 					
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="name">Email</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email address." required maxlength="100">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email address." maxlength="100">
 					</div>
 					
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="phone">Phone Number</label>
-						<input type="text" class="form-control" id="phone" name="phone" placeholder="(XXX) XXX-XXXX"  maxlength="15" pattern="\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}">
+						<input type="text" class="form-control" id="phone" name="phone" placeholder="(xxx) xxx-xxxx"  maxlength="15" pattern="\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}">
 					</div>
 					
 				</div>
@@ -48,7 +47,7 @@
 
 			<div class="form-group">
 				<label for="city">City</label>
-				<input type="text" class="form-control" id="city" name="city" placeholder="City" required maxlength="25" list="cities">
+				<input type="text" class="form-control" id="city" name="city" placeholder="City" maxlength="25" list="cities">
 				
 				<datalist id="cities">
 					<option value="Auburn"></option>
@@ -75,19 +74,19 @@
 
 			<label>Services</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="window" name="window" value="window"> Window Cleaning
+				<input type="checkbox" id="window" name="services[]" value="window"> Window Cleaning
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="gutter" name="gutter" value="gutter"> Gutter Cleaning
+				<input type="checkbox" id="gutter" name="services[]" value="gutter"> Gutter Cleaning
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="pressure" name="pressure" value="pressure"> Pressure Washing
+				<input type="checkbox" id="pressure" name="services[]" value="pressure"> Pressure Washing
 			</label>
 					
 			
 			<div class="form-group">
-				<label for="squareFeet">Square Feet</label>
-				<input type="number" class="form-control" id="squareFeet" name="squareFeet" placeholder="Please enter the square feet of your building." required min="0" max="100000">
+				<label for="squarefeet">Square Feet</label>
+				<input type="number" class="form-control" id="squarefeet" name="squarefeet" placeholder="Please enter the square feet of your building." min="0" max="100000">
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
