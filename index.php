@@ -21,9 +21,61 @@
 	<div class="container">
 		<h1>PHP Form</h1>
 		<form method="get" enctype="multipart/form-data" action="#">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" id="name" placeholder="Please enter your name." required maxlength="50">
+					</div>
+					
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label for="name">Email</label>
+						<input type="email" class="form-control" id="name" placeholder="Please enter your email address." required maxlength="100">
+					</div>
+					
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label for="phone">Phone Number</label>
+						<input type="tel" class="form-control" id="phone" placeholder="Please enter your phone number." required >
+					</div>
+					
+				</div>
+			</div>
+
 			<div class="form-group">
-				<label for="name">Name</label>
-				<input type="text" class="form-control" id="name" placeholder="Please enter your name" required>
+				<label for="city">City</label>
+				<input type="text" class="form-control" id="city" placeholder="City" required maxlength="25" list="cities">
+				
+				<datalist id="cities">
+					<option value="Auburn"></option>
+					<option value="Cameron Park"></option>
+					<option value="Camino"></option>
+					<option value="Carmichael"></option>
+					<option value="Citrus Heights"></option>
+					<option value="Davis"></option>
+					<option value="El Dorado Hills"></option>
+					<option value="Elk Grove"></option>
+					<option value="Fair Oaks"></option>
+					<option value="Folsom"></option>
+					<option value="Granite Bay"></option>
+					<option value="Orangevale"></option>
+					<option value="Placerville"></option>
+					<option value="Rancho Cordova"></option>
+					<option value="Rancho Murieta"></option>
+					<option value="Rocklin"></option>
+					<option value="Roseville"></option>
+					<option value="Sacramento"></option>
+					<option value="Shingle Springs"></option>
+				</datalist>
+			</div>
+			
+			
+			<div class="form-group">
+				<label for="square-feet">Square Feet</label>
+				<input type="number" class="form-control" id="square-feet" placeholder="Please enter the square feet of your building." required min="0" max="100000">
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
