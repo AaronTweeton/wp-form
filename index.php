@@ -20,26 +20,26 @@
   <body>
 	<div class="container">
 		<h1>PHP Form</h1>
-		<form method="get" enctype="multipart/form-data" action="#">
+		<form id="estimateForm" name="estimateForm" method="POST" enctype="multipart/form-data" action="#">
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" placeholder="Please enter your name." required maxlength="50">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name." required maxlength="50">
 					</div>
 					
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="name">Email</label>
-						<input type="email" class="form-control" id="name" placeholder="Please enter your email address." required maxlength="100">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email address." required maxlength="100">
 					</div>
 					
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label for="phone">Phone Number</label>
-						<input type="tel" class="form-control" id="phone" placeholder="Please enter your phone number." required >
+						<input type="text" class="form-control" id="phone" name="phone" placeholder="(XXX) XXX-XXXX"  maxlength="15" pattern="\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}">
 					</div>
 					
 				</div>
@@ -47,7 +47,7 @@
 
 			<div class="form-group">
 				<label for="city">City</label>
-				<input type="text" class="form-control" id="city" placeholder="City" required maxlength="25" list="cities">
+				<input type="text" class="form-control" id="city" name="city" placeholder="City" required maxlength="25" list="cities">
 				
 				<datalist id="cities">
 					<option value="Auburn"></option>
@@ -71,11 +71,22 @@
 					<option value="Shingle Springs"></option>
 				</datalist>
 			</div>
-			
+
+			<label>Services</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="window" name="window" value="window"> Window Cleaning
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="gutter" name="gutter" value="gutter"> Gutter Cleaning
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" id="pressure" name="pressure" value="pressure"> Pressure Washing
+			</label>
+					
 			
 			<div class="form-group">
-				<label for="square-feet">Square Feet</label>
-				<input type="number" class="form-control" id="square-feet" placeholder="Please enter the square feet of your building." required min="0" max="100000">
+				<label for="squareFeet">Square Feet</label>
+				<input type="number" class="form-control" id="squareFeet" name="squareFeet" placeholder="Please enter the square feet of your building." required min="0" max="100000">
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
